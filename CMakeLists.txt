@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
+project(merge-xlsx)
+
 set(CMAKE_CXX_STANDARD 17)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -W -Wall -Werror -Wno-unused-parameter -Wno-sign-compare -Wno-ignored-qualifiers -Wno-unknown-pragmas -Wno-unused-variable -Wno-unused-but-set-variable -pedantic -std=c++17 -fdiagnostics-color=always")
@@ -17,4 +19,5 @@ endif()
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake-conan/conanbuildinfo.cmake)
 conan_basic_setup()
 
-add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/src")
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/src/app")
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/src/xlsx")

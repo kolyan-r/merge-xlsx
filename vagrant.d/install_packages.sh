@@ -31,7 +31,7 @@ apt-get install -y apt-fast
 
 #Ставим пакеты
 apt-fast install -y build-essential sudo md5deep uuid zip unzip curl dirmngr cmake language-pack-en-base \
-python-pip
+python-pip gdb nano rsync
 
 pip install conan
 
@@ -48,5 +48,6 @@ sudo -u vagrant bash << EOF
   cmake .. -DCMAKE_INSTALL_PREFIX=output
   make
   make install
-  ./output/bin/merge-xlsx --help
+  export PATH=$PATH:~/merge-xlsx/cmake-build/output
+  merge-xlsx --help
 EOF
