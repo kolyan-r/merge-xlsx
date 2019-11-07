@@ -1,3 +1,5 @@
 gcc-*
 cmake-*
 .idea
+.vagrant
+.DS_Store

@@ -1,0 +1,5 @@
+config:
+  box: rvanlaar/bionic64-lxc
+  provider: lxc
+  memory: 10240
+  cpus: 8

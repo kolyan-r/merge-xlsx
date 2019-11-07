@@ -10,6 +10,7 @@ sudo pip install conan
 
 # Install & build
 ```
+conan profile new default --detect
 conan profile update settings.compiler.libcxx=libstdc++11 default
 conan remote add conan-community https://api.bintray.com/conan/conan-community/conan
 conan remote add shajeenahmed https://api.bintray.com/conan/shajeenahmed/conan
@@ -20,5 +21,12 @@ cd cmake-build
 cmake .. -DCMAKE_INSTALL_PREFIX=output
 make
 make install
-ls -la output/bin/merge-xlsx --help
+./output/bin/merge-xlsx --help
+```
+
+# Vagrant
+1. Edit `vagrant.d/config.yml`. You can customize provider, box, cpu, memory and etc.
+2. Install and provision box
+```
+vagrant up
 ```
